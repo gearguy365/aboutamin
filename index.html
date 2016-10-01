@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html ng-app="todoApp">
+    <head>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script> -->
+        <script src="libs/jquery-3.1.1.min.js" charset="utf-8"></script>
+        <script src="libs/angular.min.js" charset="utf-8"></script>
+        <script src="libs/angular-animate.js"></script>
+        <script src="libs/ui-bootstrap-tpls-2.0.2.js"></script>
+        <script src="libs/angular-aria.min.js"></script>
+        <script src="libs/angular-sanitize.min.js"></script>
+        <script src="libs/angular-material.min.js"></script>
+        <script src="libs/angular-material-calendar.js"></script>
+        <script src="libs/jspdf.min.js"></script>
+        <!-- <script src="https://use.fontawesome.com/2e18fdcd5f.js"></script> -->
+        <link href="libs/bootstrap.min.css" rel="stylesheet">
+        <link href="libs/angular-material.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="styles/styles.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="styles/font-mfizz.css" charset="utf-8">
+    </head>
+    <style media="screen">
+        .top-banner {
+            height: 100px;
+            width: 100%;
+            background-color: #106cc8;
+        }
+        .box-200 {
+            height: 150px !important;
+            width: 150px !important;
+            background-color: #106cc8 !important;
+            margin-top: -80px !important;
+            border: 10px solid #106cc8;
+            border-radius: 50%;
+        }
+        .icon-200 {
+            height: 150px !important;
+            width: 150px !important;
+            position: relative;
+        }
+        .pro-pic {
+            height: 100%;
+            width: 100%;
+        }
+        .font-roboto {
+            font-family: 'Roboto', sans-serif;
+        }
+        .body-text {
+            padding-left: 7px;
+            padding-right: 7px;
+            padding-top: 7px;
+            text-align: justify;
+        }
+        .entity-icons {
+            height: 15px !important;
+            padding-bottom: 2px !important;
+        }
+        .work-icon {
+            background: #106cc8;
+            color: white;
+            border-radius: 50%;
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-top: 4px;
+            margin-right: 4px;
+        }
+
+        .code-icon {
+            background: #106cc8;
+            color: white;
+            border-radius: 50%;
+            padding-left: 6px;
+            padding-right: 5px;
+            padding-top: 5px;
+            margin-right: 4px;
+        }
+
+    </style>
+    <body class="font-roboto" style="background-color: whitesmoke">
+        <div ng-controller="cvController" id="bodyElem">
+            <md-content id="somethingSpecial" style="background-color: whitesmoke" layout="column" flex>
+                <div class="top-banner"></div>
+
+                <div layout="row" layout-align="center center" flex>
+                    <div class="box-200">
+                        <img src="/img/original.png" alt="propic" class="pro-pic"/>
+                    </div>
+                </div>
+                <div layout="column" flex>
+                    <h1 style="text-align: center">Al Amin</h1>
+                    <h4 style="text-align: center">Software Developer</h4>
+                    <div layout="row" layout-align="center center">
+                        <md-button flex="10" ng-click="generatePdf()">Download PDF</md-button>
+
+                    </div>
+                    <div layout="row" layout-align="center center">
+                        <div layout="column" flex="80">
+                            <div layout="column">
+                                <md-card md-theme="default" style="padding:10px">
+                                    <md-card-title layout="row" layout-align="space-between center">
+                                        <md-card-title-text style="padding-left: 7px" flex>
+                                            <h4 style="font-size: 20px">About</h4>
+                                            <!-- <span class="md-subhead">Large</span> -->
+                                        </md-card-title-text>
+                                        <md-card-title-media>
+                                            <!-- <md-icon class="fill-white" md-svg-icon="img/icons/menu.svg" style="height: 40px; width: 45px;"></md-icon> -->
+                                            <i class="material-icons" style="font-size: 39px; color: #106cc8">account_circle</i>
+                                        </md-card-title-media>
+                                    </md-card-title>
+                                    <md-card-actions layout="row" layout-align="end center">
+                                        <p class="body-text">
+                                            I am al amin, 23 year old software developer from Dhaka, Bangladesh. Being passionate about technology from early life, i decided to peruse a degree in computer science and eventually, chose the career of a software developer. Before i came to become a professional developer, i worked as an independent freelancer and a hobbyist programmer. I primarily specialize in web application development, but i am also interested in artificial intelligence, machine learning and embedded systems. I aspire to enrich my skills and extend the horizon of my career by taking on new challenges, thus willing to go great lengths to achieve my goals.  I am a team player and love to exchange ideas with others on how to solve a particular problem.
+                                        </p>
+                                    </md-card-actions>
+                                </md-card>
+                            </div>
+                            <div layout="row">
+                                <md-card md-theme="default" style="padding:10px" flex>
+                                    <md-card-title layout="row" layout-align="space-between center">
+                                        <md-card-title-text style="padding-left: 7px" flex>
+                                            <h4 style="font-size: 20px">Skills</h4>
+                                            <!-- <span class="md-subhead">Large</span> -->
+                                        </md-card-title-text>
+                                        <md-card-title-media>
+                                            <!-- <md-icon class="fill-white" md-svg-icon="img/icons/menu.svg" style="height: 40px; width: 45px;"></md-icon> -->
+                                            <div class="code-icon">
+                                                <i class="material-icons">code</i>
+                                            </div>
+                                        </md-card-title-media>
+                                    </md-card-title>
+                                    <md-card-actions layout-align="start start" style="padding-left: 7px;">
+                                        <div layout="row">
+                                            <div layout="column" flex="70">
+                                                <div layout="column" style="padding-bottom: 15px;" flex>
+
+                                                    <div>
+                                                        <h4 style="font-size: 14px; color: #106cc8;">Programming Languages</h4>
+                                                    </div>
+                                                    <div layout="column" style="padding-top: 10px;">
+                                                        <div layout="row" layout-align="start center" flex>
+                                                            <i class="icon-javascript-alt" style="font-size: 18px;"></i>
+                                                            <span flex="30">JavaScript</span>
+                                                            <md-progress-linear flex="70" md-mode="determinate" value="75"></md-progress-linear>
+                                                        </div>
+                                                        <div layout="row" layout-align="start center">
+                                                            <i class="icon-java-bold" style="font-size: 18px;"></i>
+                                                            <span flex="30">Java</span>
+                                                            <md-progress-linear flex="70" md-mode="determinate" value="70"></md-progress-linear>
+                                                        </div>
+                                                        <div layout="row" layout-align="start center">
+                                                            <i class="icon-php-alt" style="font-size: 18px;"></i>
+                                                            <span flex="30">php</span>
+                                                            <md-progress-linear flex="70" md-mode="determinate" value="65"></md-progress-linear>
+                                                        </div>
+                                                        <div layout="row" layout-align="start center">
+                                                            <i class="icon-python" style="font-size: 18px;"></i>
+                                                            <span flex="30">python</span>
+                                                            <md-progress-linear flex="70" md-mode="determinate" value="30"></md-progress-linear>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="padding-bottom: 15px;">
+                                            <div>
+                                                <h4 style="font-size: 14px; color: #106cc8;">Technologies & Frameworks</h4>
+                                            </div>
+                                            <p>
+                                                <md-chips>
+                                                    <md-chip>AngularJS</md-chip>
+                                                    <md-chip>jQuery</md-chip>
+                                                    <md-chip>Laravel</md-chip>
+                                                    <md-chip>CakePHP</md-chip>
+                                                    <md-chip>HTML5</md-chip>
+                                                    <md-chip>Bootstrap</md-chip>
+                                                    <md-chip>MySQL</md-chip>
+                                                    <md-chip>MongoDB</md-chip>
+                                                    <md-chip>Scss/Sass</md-chip>
+                                                    <md-chip>Git(bash)</md-chip>
+                                                    <md-chip>Gulp</md-chip>
+                                                    <md-chip>Android SDK</md-chip>
+                                                    <md-chip>Android Studio</md-chip>
+                                                    <md-chip>vi/vim</md-chip>
+                                                </md-chips>
+                                            </p>
+                                        </div>
+                                    </md-card-actions>
+                                </md-card>
+                                <md-card md-theme="default" style="padding:10px" flex>
+                                    <md-card-title layout="row" layout-align="space-between center">
+                                        <md-card-title-text style="padding-left: 7px" flex>
+                                            <h4 style="font-size: 20px">Work Experience</h4>
+                                            <!-- <span class="md-subhead">Large</span> -->
+                                        </md-card-title-text>
+                                        <md-card-title-media>
+                                            <!-- <md-icon class="fill-white" md-svg-icon="img/icons/menu.svg" style="height: 40px; width: 45px;"></md-icon> -->
+                                            <div class="work-icon">
+                                                <i class="material-icons">work</i>
+                                            </div>
+                                        </md-card-title-media>
+                                    </md-card-title>
+                                    <md-card-actions layout="column" layout-align="start start" style="padding-left: 7px;">
+                                        <div style="padding-bottom: 15px;">
+                                            <div>
+                                                <h4 style="font-size: 14px; color: #106cc8;">Software Engineer</h4>
+                                                <div layout="row"  layout-align="start center">
+                                                    <div layout="row">
+                                                        <md-icon class="fill-white entity-icons" md-svg-icon="img/icons/ic_business_black_24px.svg"></md-icon>
+                                                    </div>
+                                                    <span>Secure Link Services Ltd.</span>
+                                                    <div layout="row">
+                                                        <md-icon class="fill-white entity-icons" md-svg-icon="img/icons/ic_date_range_black_24px.svg"></md-icon>
+                                                    </div>
+                                                    <span>March 2016 - Present</span>
+                                                </div>
+                                            </div>
+                                            <p style="padding-top: 10px;">
+                                                Secure Link Services Ltd. is a Switzerland based software company. It products and services are primarily targeted for big enterprises in central Europe. SELISE Ltd. specializes in cloud based web and mobile applications.
+                                            </p>
+                                        </div>
+
+                                        <div style="padding-bottom: 15px;">
+                                            <div>
+                                                <h4 style="font-size: 14px; color: #106cc8;">Web Developer</h4>
+                                                <div layout="row"  layout-align="start center">
+                                                    <div layout="row">
+                                                        <md-icon class="fill-white entity-icons" md-svg-icon="img/icons/ic_business_black_24px.svg"></md-icon>
+                                                    </div>
+                                                    <span>Independant/ Freelancer</span>
+                                                    <div layout="row">
+                                                        <md-icon class="fill-white entity-icons" md-svg-icon="img/icons/ic_date_range_black_24px.svg"></md-icon>
+                                                    </div>
+                                                    <span>January 2015 - February 2016</span>
+                                                </div>
+                                            </div>
+                                            <p style="padding-top: 10px;">
+                                                Worked as a freelancer programmer for local private business owners.
+                                            </p>
+                                        </div>
+                                    </md-card-actions>
+                                </md-card>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </md-content>
+        </div>
+        <script src="controller.js" charset="utf-8"></script>
+        <script src="cv.js" charset="utf-8"></script>
+    </body>
+</html>

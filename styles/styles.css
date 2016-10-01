@@ -1,0 +1,24 @@
+.font-size-100 {
+    font-size: 100px;
+}
+
+.card {
+    background-color: white;
+    text-align: center;
+    padding: 25px 5px 25px 5px;
+    /*margin: 10px;*/
+}
+
+.card-clicked {
+    color: white;
+    background-color: black;
+}
+
+.loading-gif {
+    padding-top: 60px;
+    position: absolute;
+}
+
+.fill-white {
+    fill: white;
+}
