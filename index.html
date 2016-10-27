@@ -9,7 +9,7 @@
         <script src="libs/angular-aria.min.js"></script>
         <script src="libs/angular-sanitize.min.js"></script>
         <script src="libs/angular-material.min.js"></script>
-        <script src="libs/angular-material-calendar.js"></script>
+        <!-- <script src="libs/angular-material-calendar.js"></script> -->
         <script src="libs/jspdf.min.js"></script>
         <link href="libs/bootstrap.min.css" rel="stylesheet">
         <link href="libs/angular-material.min.css" rel="stylesheet">
@@ -40,6 +40,7 @@
         .pro-pic {
             height: 100%;
             width: 100%;
+            border-radius: 50%;
         }
         .font-roboto {
             font-family: 'Roboto', sans-serif;
@@ -90,16 +91,12 @@
 
                 <div layout="row" layout-align="center center" flex>
                     <div class="box-200">
-                        <img src="/img/original.png" alt="propic" class="pro-pic"/>
+                        <img src="/img/original.jpg" alt="propic" class="pro-pic"/>
                     </div>
                 </div>
                 <div layout="column" flex>
                     <h1 style="text-align: center">Al Amin</h1>
                     <h4 style="text-align: center">Software Developer</h4>
-                    <div layout="row" layout-align="center center">
-                        <md-button flex="10" ng-click="generatePdf()">Download PDF</md-button>
-
-                    </div>
                     <div layout="row" layout-align="center center">
                         <div layout="column" flex="80">
                             <!-- ABOUT -->
@@ -212,7 +209,7 @@
                                     <md-card-actions layout="column" layout-align="start start" style="padding-left: 7px;">
                                         <div style="padding-bottom: 15px;">
                                             <div>
-                                                <h4 style="font-size: 15px; color: #106cc8;">Stock Management Platform</h4>
+                                                <h4 style="font-size: 15px; color: #106cc8;">Software Engineer</h4>
                                                 <div layout="row"  layout-align="start center">
                                                     <div layout="row">
                                                         <md-icon class="fill-white entity-icons" md-svg-icon="img/icons/ic_business_black_24px.svg"></md-icon>
@@ -372,18 +369,35 @@
 
                                         <div style="padding-bottom: 15px;">
                                             <div>
-                                                <h4 style="font-size: 15px; color: #106cc8;">Visual </h4>
+                                                <h4 style="font-size: 15px; color: #106cc8;">Visual Tree Configurator</h4>
                                                 <div layout="row"  layout-align="start center">
                                                     <div layout="row">
                                                         <i class="material-icons" style="font-size: 12px; padding-bottom: 2px; padding-right: 3px;">build</i>
                                                     </div>
                                                     <span>
-                                                        django, AngularJS, postgres
+                                                        AngularJS, HTML5, CSS3
                                                     </span>
                                                 </div>
                                             </div>
                                             <p style="padding-top: 10px;">
-                                                This project was a stock buying & selling platform developed for an European client. Using this platform companies or entities can register into the system, market themselved and sell their bonds. In a similar way, individuals can register into the system and browse/buy bonds of companies they like.
+                                                A single page web application that features a drag & dropable congiration UI. The application involves very dynamic and reactive DOM manupulation to render the configuation tree. A JSON tree data structure is maintained for the tree represntation.
+                                            </p>
+                                        </div>
+
+                                        <div style="padding-bottom: 15px;">
+                                            <div>
+                                                <h4 style="font-size: 15px; color: #106cc8;">Web Portal for Car Servicing</h4>
+                                                <div layout="row"  layout-align="start center">
+                                                    <div layout="row">
+                                                        <i class="material-icons" style="font-size: 12px; padding-bottom: 2px; padding-right: 3px;">build</i>
+                                                    </div>
+                                                    <span>
+                                                        .NET, MongoDB, AngularJS, Angular material
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <p style="padding-top: 10px;">
+                                                A web portal/SPA developed for one of the largest auto garages in Europe. The application enables car owners to book reservations for servicing their vehicles. The application also allowes the garage admins to mange the appointments, assign mechanics and monitor overall progress of work in their garage.
                                             </p>
                                         </div>
                                     </md-card-actions>

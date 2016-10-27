@@ -1,5 +1,6 @@
 // var myApp = angular.module('todoApp', ['ngAnimate', 'ui.bootstrap']);
-var myApp = angular.module('todoApp', ["ngMaterial", "materialCalendar"]);
+// var myApp = angular.module('todoApp', ["ngMaterial", "materialCalendar"]);
+var myApp = angular.module('todoApp', ["ngMaterial"]);
 
 myApp.controller('TodoListController', function($scope, $http, AppointmentService) {
     $scope.message = 'hello world';
