@@ -83,6 +83,25 @@
             font-size: 14px;
         }
 
+        md-progress-linear {
+            height: 10px;
+        }
+
+        md-progress-linear .md-container .md-bar2 {
+            height: 10px;
+        }
+
+        md-progress-linear .md-container {
+            height: 10px;
+        }
+
+        .grad-cap {
+            font-size: 20px !important;
+            height: 30px;
+            width: 25px;
+            padding-top: 3px;
+        }
+
     </style>
     <body class="font-roboto" style="background-color: whitesmoke">
         <div ng-controller="cvController" id="bodyElem">
@@ -114,7 +133,7 @@
                                     </md-card-title>
                                     <md-card-actions layout="row" layout-align="end center">
                                         <p class="body-text">
-                                            I am al amin, 23 year old software developer from Dhaka, Bangladesh. Being passionate about technology from early life, i decided to peruse a degree in computer science and eventually, chose the career of a software developer. Before i came to become a professional developer, i worked as an independent freelancer and a hobbyist programmer. I primarily specialize in web application development, but i am also interested in artificial intelligence, machine learning and embedded systems. I aspire to enrich my skills and extend the horizon of my career by taking on new challenges, thus willing to go great lengths to achieve my goals.  I am a team player and love to exchange ideas with others on how to solve a particular problem.
+                                            I am al amin, 23 year old software developer from Dhaka, Bangladesh. Being passionate about technology from early life, I decided to peruse a degree in computer science and eventually, chose the career of a software developer. Before i came to become a professional developer, i worked as an independent freelancer and a hobbyist programmer. I primarily specialize in web application development, but i am also interested in artificial intelligence, machine learning and embedded systems. I aspire to enrich my skills and extend the horizon of my career by taking on new challenges, thus willing to go great lengths to achieve my goals.  I am a team player and love to exchange ideas with others on how to solve a particular problem.
                                         </p>
                                     </md-card-actions>
                                 </md-card>
@@ -136,7 +155,7 @@
                                     </md-card-title>
                                     <md-card-actions layout-align="start start" style="padding-left: 7px;">
                                         <div layout="row">
-                                            <div layout="column" flex="70">
+                                            <div layout="column" flex="80">
                                                 <div layout="column" style="padding-bottom: 15px;" flex>
 
                                                     <div>
@@ -144,24 +163,24 @@
                                                     </div>
                                                     <div layout="column" style="padding-top: 10px;">
                                                         <div layout="row" layout-align="start center" flex>
-                                                            <i class="icon-javascript-alt" style="font-size: 18px; padding-right: 4px;"></i>
-                                                            <span flex="30" style="padding-bottom: 3px;">JavaScript</span>
-                                                            <md-progress-linear flex="70" md-mode="determinate" value="75"></md-progress-linear>
+                                                            <i class="icon-javascript-alt" style="font-size: 20px; padding-right: 4px;"></i>
+                                                            <span flex="30" >JavaScript</span>
+                                                            <md-progress-linear class="custom-progressbar" flex md-mode="determinate" value="75"></md-progress-linear>
                                                         </div>
                                                         <div layout="row" layout-align="start center">
-                                                            <i class="icon-java-bold" style="font-size: 18px; padding-right: 4px;"></i>
-                                                            <span flex="30" style="padding-bottom: 3px;">Java</span>
-                                                            <md-progress-linear flex="70" md-mode="determinate" value="70"></md-progress-linear>
+                                                            <i class="icon-java-bold" style="font-size: 20px; padding-right: 4px;"></i>
+                                                            <span flex="30">Java</span>
+                                                            <md-progress-linear class="custom-progressbar" flex md-mode="determinate" value="70"></md-progress-linear>
                                                         </div>
                                                         <div layout="row" layout-align="start center">
-                                                            <i class="icon-php-alt" style="font-size: 18px; padding-right: 4px;"></i>
-                                                            <span flex="30" style="padding-bottom: 3px;">php</span>
-                                                            <md-progress-linear flex="70" md-mode="determinate" value="65"></md-progress-linear>
+                                                            <i class="icon-php-alt" style="font-size: 20px; padding-right: 4px;"></i>
+                                                            <span flex="30">php</span>
+                                                            <md-progress-linear class="custom-progressbar" flex md-mode="determinate" value="65"></md-progress-linear>
                                                         </div>
                                                         <div layout="row" layout-align="start center">
-                                                            <i class="icon-python" style="font-size: 18px; padding-right: 4px;"></i>
-                                                            <span flex="30" style="padding-bottom: 3px;">python</span>
-                                                            <md-progress-linear flex="70" md-mode="determinate" value="30"></md-progress-linear>
+                                                            <i class="icon-python" style="font-size: 20px; padding-right: 4px;"></i>
+                                                            <span flex="30">python</span>
+                                                            <md-progress-linear class="custom-progressbar" flex md-mode="determinate" value="30"></md-progress-linear>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -174,6 +193,7 @@
                                             <p>
                                                 <md-chips>
                                                     <md-chip>AngularJS</md-chip>
+                                                    <md-chip>Angular Material</md-chip>
                                                     <md-chip>Yeoman</md-chip>
                                                     <md-chip>jQuery</md-chip>
                                                     <md-chip>HTML5</md-chip>
@@ -248,7 +268,7 @@
                                                 </div>
                                             </div>
                                             <p style="padding-top: 10px;">
-                                                During this time, I worked as a freelancer web developer. I worked for a couple of local business to develop their company sites and also worked on a few individual projects.
+                                                During this time, I worked as a freelancer web developer. I worked for a couple of local businesses to develop their company sites and also worked on a few individual projects.
                                             </p>
                                         </div>
                                     </md-card-actions>
@@ -308,7 +328,7 @@
                                     </md-card-actions>
                                 </md-card>
                             </div>
-                            <div layout="row" style="padding-top: 25px;">
+                            <div layout="row" style="padding-top: 50px;">
                                 <!-- PROJECTS -->
                                 <md-card md-theme="default" style="padding:10px" flex>
                                     <md-card-actions layout="column" layout-align="start start" style="padding-left: 7px;">
@@ -329,7 +349,7 @@
                                                     A web portal/SPA developed for one of the largest auto garages in Europe. The application enables car owners to book reservations for servicing their vehicles. The application also allowes the garage admins to mange the appointments, assign mechanics and monitor overall progress of work in their garage.
                                                 </p>
                                             </div>
-                                            <div flex="50" style="padding-bottom: 15px; padding-right: 25px;">
+                                            <!-- <div flex="50" style="padding-bottom: 15px; padding-right: 25px;">
                                                 <div>
                                                     <h4 style="font-size: 15px; color: #106cc8;">Web Portal for Car Servicing</h4>
                                                     <div layout="row"  layout-align="start center">
@@ -344,51 +364,108 @@
                                                 <p style="padding-top: 10px;">
                                                     A web portal/SPA developed for one of the largest auto garages in Europe. The application enables car owners to book reservations for servicing their vehicles. The application also allowes the garage admins to mange the appointments, assign mechanics and monitor overall progress of work in their garage.
                                                 </p>
-                                            </div>
+                                            </div> -->
                                         </div>
 
                                     </md-card-actions>
                                 </md-card>
                             </div>
-                            <div layout="row">
-                                <!-- SPOKEN LANGUAGES -->
-                                <md-card md-theme="default" style="padding:10px" flex>
-                                    <md-card-title layout="row" layout-align="space-between center">
-                                        <md-card-title-text style="padding-left: 7px" flex>
-                                            <h4 style="font-size: 20px">Spoken Languages</h4>
-                                            <!-- <span class="md-subhead">Large</span> -->
-                                        </md-card-title-text>
-                                        <md-card-title-media>
-                                            <!-- <md-icon class="fill-white" md-svg-icon="img/icons/menu.svg" style="height: 40px; width: 45px;"></md-icon> -->
-                                            <div class="code-icon">
-                                                <i class="material-icons">translate</i>
-                                            </div>
-                                        </md-card-title-media>
-                                    </md-card-title>
-                                    <md-card-actions layout-align="start start" style="padding-left: 7px;">
-                                        <div layout="row">
-                                            <div layout="column" flex="70" layout-align="center start">
-                                                <div layout="column"  flex>
-                                                    <div layout="row" layout-align="start center">
-                                                        <i class="material-icons font-20">fiber_manual_record</i>
-                                                        <span class="font-14" style="padding-left: 4px">Bengali: &nbsp;</span>
-                                                        <span>Native Level</span>
+                            <div layout="row" style="padding-bottom: 500px;">
+                                <div layout="column" flex>
+                                    <!-- SPOKEN LANGUAGES -->
+                                    <div layout="column" flex>
+                                        <md-card md-theme="default" style="padding:10px" flex="30">
+                                            <md-card-title layout="row" layout-align="space-between center" style="padding-top: 20px; padding-bottom: 20px;">
+                                                <md-card-title-text style="padding-left: 7px" flex>
+                                                    <h4 style="font-size: 20px">Spoken Languages</h4>
+                                                    <!-- <span class="md-subhead">Large</span> -->
+                                                </md-card-title-text>
+                                                <md-card-title-media>
+                                                    <!-- <md-icon class="fill-white" md-svg-icon="img/icons/menu.svg" style="height: 40px; width: 45px;"></md-icon> -->
+                                                    <div class="code-icon">
+                                                        <i class="material-icons">translate</i>
                                                     </div>
-                                                    <div layout="row" layout-align="start center">
-                                                        <i class="material-icons font-20">fiber_manual_record</i>
-                                                        <span class="font-14" style="padding-left: 4px">English: &nbsp;</span>
-                                                        <span>Professional Level</span>
-                                                    </div>
-                                                    <div layout="row" layout-align="start center">
-                                                        <i class="material-icons font-20">fiber_manual_record</i>
-                                                        <span class="font-14" style="padding-left: 4px">Japanesse: &nbsp;</span>
-                                                        <span>Day to day converstaion level</span>
+                                                </md-card-title-media>
+                                            </md-card-title>
+                                            <md-card-actions layout-align="start start" style="padding-left: 7px;">
+                                                <div layout="row">
+                                                    <div layout="column" flex="80" layout-align="center start">
+                                                        <div layout="column"  flex>
+                                                            <div layout="row" layout-align="start center">
+                                                                <i class="material-icons font-20">fiber_manual_record</i>
+                                                                <span class="font-14" style="padding-left: 4px">Bengali: &nbsp;</span>
+                                                                <span>Native Level</span>
+                                                            </div>
+                                                            <div layout="row" layout-align="start center">
+                                                                <i class="material-icons font-20">fiber_manual_record</i>
+                                                                <span class="font-14" style="padding-left: 4px">English: &nbsp;</span>
+                                                                <span>Professional Level</span>
+                                                            </div>
+                                                            <div layout="row" layout-align="start center">
+                                                                <i class="material-icons font-20">fiber_manual_record</i>
+                                                                <span class="font-14" style="padding-left: 4px">Japanesse: &nbsp;</span>
+                                                                <span>Day to day converstaion level</span>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </md-card-actions>
-                                </md-card>
+                                            </md-card-actions>
+                                        </md-card>
+                                        <!-- Education -->
+                                        <md-card md-theme="default" style="padding:10px" flex>
+                                            <md-card-title layout="row" layout-align="space-between center">
+                                                <md-card-title-text style="padding-left: 7px" flex>
+                                                    <h4 style="font-size: 20px">Education</h4>
+                                                    <!-- <span class="md-subhead">Large</span> -->
+                                                </md-card-title-text>
+                                                <md-card-title-media>
+                                                    <!-- <md-icon class="fill-white" md-svg-icon="img/icons/menu.svg" style="height: 40px; width: 45px;"></md-icon> -->
+                                                    <div class="code-icon">
+                                                        <!-- <i class="material-icons">translate</i> -->
+                                                        <i class="fa fa-graduation-cap grad-cap" aria-hidden="true"></i>
+                                                    </div>
+                                                </md-card-title-media>
+                                            </md-card-title>
+                                            <md-card-actions layout-align="start start" style="padding-left: 7px;">
+                                                <div style="padding-bottom: 15px;">
+                                                    <div style="padding-bottom: 10px;">
+                                                        <h4 style="font-size: 15px; color: #106cc8;">BSc in Computer Science</h4>
+                                                        <div layout="row"  layout-align="start center">
+                                                            <div layout="row">
+                                                                <i class="fa fa-university" style="font-size: 12px; padding-right: 3px" aria-hidden="true"></i>
+                                                            </div>
+                                                            <span style="padding-right: 20px;">BRAC University</span>
+                                                            <div layout="row" style="padding-bottom: 2px;">
+                                                                <i class="fa fa-map-marker" style="font-size: 15px; padding-right: 3px" aria-hidden="true"></i>
+                                                            </div>
+                                                            <span>Dhaka, Bangladesh</span>
+                                                        </div>
+                                                        <p style="padding-top: 10px;">
+                                                            2011 - 2015
+                                                        </p>
+                                                    </div>
+                                                    <div style="padding-bottom: 10px;">
+                                                        <h4 style="font-size: 15px; color: #106cc8;">School/ High School</h4>
+                                                        <div layout="row"  layout-align="start center">
+                                                            <div layout="row">
+                                                                <i class="fa fa-university" style="font-size: 12px; padding-right: 3px" aria-hidden="true"></i>
+                                                            </div>
+                                                            <span style="padding-right: 20px;">Adamjee Cantonment School</span>
+                                                            <div layout="row" style="padding-bottom: 2px;">
+                                                                <i class="fa fa-map-marker" style="font-size: 15px; padding-right: 3px" aria-hidden="true"></i>
+                                                            </div>
+                                                            <span>Dhaka, Bangladesh</span>
+                                                        </div>
+                                                        <p style="padding-top: 10px;">
+                                                            1998 - 2010
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </md-card-actions>
+                                        </md-card>
+                                    </div>
+
+                                </div>
                                 <!-- CONTACTS -->
                                 <md-card md-theme="default" style="padding:10px" flex>
                                     <md-card-title layout="row" layout-align="space-between center">
@@ -425,7 +502,27 @@
                                                         <div layout="row" layout-align="start center">
                                                             <i class="fa fa-stack-overflow" aria-hidden="true" style="font-size: 17px; padding-right: 7px; padding-bottom: 3px;"></i>
                                                             <span flex="30">stackoverflow</span>
-                                                            <a href="http://stackoverflow.com/users/3912900/amin365">stackoverflow.com/users/3912900/amin365</a>
+                                                            <a href="http://stackoverflow.com/users/3912900/amin365">stackoverflow.com</a>
+                                                        </div>
+                                                    </div>
+                                                    <div style="padding-top: 20px;">
+                                                        <h4 style="font-size: 15px; color: #106cc8;">Contact</h4>
+                                                    </div>
+                                                    <div layout="column" style="padding-top: 10px;">
+                                                        <div layout="row" layout-align="start center" flex>
+                                                            <i class="fa fa-envelope" style="font-size: 17px; padding-right: 7px; padding-bottom: 3px;" aria-hidden="true"></i>
+                                                            <span flex="30">Mail</span>
+                                                            <span style="color: blue;">alamin365@outlook.com</span>
+                                                        </div>
+                                                        <div layout="row" layout-align="start center">
+                                                            <i class="fa fa-skype" aria-hidden="true" style="font-size: 17px; padding-right: 7px; padding-bottom: 3px;"></i>
+                                                            <span flex="30">Skype</span>
+                                                            <span style="color: blue; padding-left: 3px;">bdraptor</span>
+                                                        </div>
+                                                        <div layout="row" layout-align="start center">
+                                                            <i class="material-icons" style="font-size: 17px; padding-right: 7px; padding-bottom: 3px;">phone</i>
+                                                            <span flex="30">Phone</span>
+                                                            <span style="color: blue;">+8801678017074</span>
                                                         </div>
                                                     </div>
                                                 </div>
